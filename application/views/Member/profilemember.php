@@ -121,8 +121,7 @@
                                 <input type="text" class="form-control" value="<?php echo $user->email?>" disabled/>
                             </div>
                         </div>
-
-                        <a href="<?php echo site_url('C_Member/editprofileM');?>" class="btn btn-default pull-right">Edit Profile?</a>
+                        <center><a href="<?php echo site_url('C_Member/editprofileM');?>" class="btn btn-default">Edit Profile?</a></center>
                         <p></p>
                     </div>
                     </section>
