@@ -111,12 +111,13 @@
                                 <input type="textarea" row="5" class="form-control" value="<?php echo $resep->deskripsi ?>" disabled/>
                             </div>
                         </div>
-                       <div class="form-group">
-                            <input type="hidden">
+						<div class="form-group">
+                            <label class="col-sm-2 col-sm-offset-3 control-label"></label>
+                                <div class="col-md-4 col-xs-12">
+                                <button class="btn btn-primary pull-right">Submit</button>
+                            </div>
                         </div>
-                        <button class="btn btn-primary pull-right">Submit</button>
-                        </div>
-                    </div>
+                       
                 </form>
                     </section>
 
