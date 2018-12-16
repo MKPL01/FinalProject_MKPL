@@ -52,7 +52,7 @@
   <!--/.navbar-header-->
              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-               <li><a href="<?php echo site_url('C_Member/index') ?>">Home</a></li>
+               <li><a href="<?php echo site_url('main_user/index') ?>">Home</a></li>
                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kategori<b class="caret"></b></a>
                     <ul class="dropdown-menu multi-column columns-1">

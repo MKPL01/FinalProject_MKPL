@@ -136,12 +136,7 @@
 
 
 		<!-- <!-- <!-- <!-- content-section-starts-here -->
-		<div class="other-products">
-		<div class="container">
-			<h3 class="like text-center">Top Receipt</h3>
-			<ul id="flexiselDemo3">
-				    
-				     </ul>        			
+				
 				    <script type="text/javascript">
 					 $(window).load(function() {
 						$("#flexiselDemo3").flexisel({
@@ -170,8 +165,7 @@
 					});
 				   </script>
 				   <script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery.flexisel.js"></script>
-				   </div>
-				   </div>
+				   
 			</div> -->
 		<div class="container">
 			<div class="main-content">
