@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://em.ub.ac.id/penawaranterbuka/form.php?kapel=2 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags must come first in the head; any other head content must come after these tags -->
+    <title>Registration Form</title>
+
+    <!-- Bootstrap -->
+    <link href="./Registration Form_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./Registration Form_files/css.css" rel="stylesheet">
+    <style type="text/css">
+        #deceased {
+            background-color: #FFF3F5;
+            padding-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .remove_field {
+            float: right;
+            cursor: pointer;
+            position: absolute;
+        }
+
+        .remove_field:hover {
+            text-decoration: none;
+        }
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./Registration Form_files/jquery-2.2.3.js.download"></script>
+    <script src="./Registration Form_files/js.js.download"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./Registration Form_files/bootstrap.min.js.download"></script>
+    <script type="text/javascript">
+        $(function () {
+            //calendar call function
+            $('.datepicker').dcalendar();
+            $('.datepicker').dcalendarpicker();
+
+            var max_fields = 10; //maximum input boxes allowed
+            var x = 1; //initlal text box count
+
+            $('#add').click(function () {
+                if (x < max_fields) { //max input box allowed
+                    x++; //text box increment
+                    $("#addblock").before('<div class="col-md-12 col-sm-12" id="deceased">	<a href="#" class="remove_field" title="Remove">X</a>	<div class="form-group col-md-3 col-sm-3">            <label for="name">Name</label>            <input type="text" class="form-control input-sm" id="name" placeholder="" required>        </div>	<div class="form-group col-md-3 col-sm-3">            <label for="gender">Gender</label>            <input type="text" class="form-control input-sm" id="gender" placeholder="" required>        </div>	<div class="form-group col-md-3 col-sm-3">            <label for="age">Age</label>            <input type="text" class="form-control input-sm" id="age" placeholder="" required>        </div>	<div class="form-group col-md-3 col-sm-3">            <label for="DOB">Date of Birth or Exact Birth Year</label>            <input type="text" class="form-control input-sm datepicker" id="DOB' + x + '" placeholder="" required>        </div>	<div class="form-group col-md-3 col-sm-3">            <label for="DOD">Date of Death or Exact Death Year</label>             <input type="text" class="form-control input-sm datepicker" id="DOD' + x + '" placeholder="" required>        </div>	<div class="form-group col-md-3 col-sm-3">            <label for="mother">Deceased Person\'s Mother Name</label>            <input type="text" class="form-control input-sm" id="mother" placeholder="" required>        </div>	<div class="form-group col-md-3 col-sm-3">            <label for="father">Deceased Person\'s Father Name</label>            <input type="text" class="form-control input-sm" id="father" placeholder="" required>        </div>	<div class="form-group col-md-3 col-sm-3">	    <label for="photo">Upload Photo</label>	    <input type="file" id="photo">	    <p class="help-block">Please upload individual photo. Group photo is not acceptable.</p>	</div></div>');
+
+                    $('.datepicker').dcalendarpicker();
+                } else {
+                    alert("Only 10 Names Allowed");
+                }
+            });
+            $(document).on('click', '.remove_field', function (e) {
+                e.preventDefault();
+                $(this).parent('div').remove();
+                x--;
+            });
+
+
+        });
+    </script>
+    <script type="text/javascript">
+        function tambahorganisasi() {
+            var d = document.getElementById("oraganisasi");
+            var data2 = "<div class=\"form-group col-md-12 col-sm-12\">" +
+                "<label for=\"name\">Nama Organisasi</label>" +
+                "<input name=\"namaorganisasi[]\" type=\"text\" class=\"form-control input-sm\" id=\"name\" placeholder=\"\"></div>" +
+                "<div class=\"form-group col-md-12 col-sm-12\">" +
+                "<label for=\"name\">Jabatan</label>" +
+                "<input name=\"jabatanorganisasi[]\" type=\"text\" class=\"form-control input-sm\" id=\"name\" placeholder=\"\"></div>" +
+                "<div class=\"form-group col-md-12 col-sm-12\">" +
+                "<label for=\"name\">Tahun</label>" +
+                "<input name=\"tahunorganisasi[]\" type=\"text\" class=\"form-control input-sm\" id=\"name\" placeholder=\"\">" +
+                "</div>";
+
+
+            d.innerHTML += data2;
+        }
+        function tambahlembaga() {
+            var d = document.getElementById("lembaga");
+            var data2 = "<div class=\"form-group col-md-6 col-sm-6\">" +
+                "<label for=\"name\">Nama Lembaga </label>" +
+                "<input name=\"namalembaga[]\" type=\"text\" class=\"form-control input-sm\" id=\"name\" placeholder=\"\">" +
+                "   </div>" +
+                "  <div class=\"form-group col-md-6 col-sm-6\">" +
+                " <label for=\"name\">Materi Pendidikan</label>" +
+                "<input name=\"materi[]\" type=\"text\" class=\"form-control input-sm\" id=\"name\" placeholder=\"\">" +
+                "  </div>" +
+                "  <div class=\"form-group col-md-6 col-sm-6\">" +
+                " <label for=\"name\">Waktu Pendidikan</label>" +
+                "<input name=\"waktupendidikan[]\" type=\"text\" class=\"form-control input-sm\" id=\"name\"" +
+                "placeholder=\"\">" +
+                "   </div>" +
+                "  <div class=\"form-group col-md-6 col-sm-6\">" +
+                " <label for=\"name\">Lokasi</label>" +
+                "<input name=\"lokasipendidikan[]\" type=\"text\" class=\"form-control input-sm\" id=\"name\"" +
+                "placeholder=\"\">";
+
+
+            d.innerHTML += data2;
+        }
+        function tambahkegiatan() {
+            var d = document.getElementById("kegiatan");
+            var data2 = "<div class=\"form-group col-md-12 col-sm-12\">" +
+                "<label for=\"name\">Nama Kegiatan</label>" +
+                "<input name=\"namakegiatan[]\" type=\"text\" class=\"form-control input-sm\" id=\"name\" placeholder=\"\">" +
+                "   </div>" +
+                "   <div class=\"form-group col-md-12 col-sm-12\">" +
+                "   <label for=\"name\">Deskripsi</label>" +
+                "   <input name=\"deskripsikegiatan[]\" type=\"text\" class=\"form-control input-sm\" id=\"name\"" +
+                "placeholder=\"\">" +
+                "   </div>" +
+                "   <div class=\"form-group col-md-12 col-sm-12\">" +
+                "   <label for=\"name\">Tahun</label>" +
+                "   <input name=\"tahunkegiatan[]\" type=\"text\" class=\"form-control input-sm\" id=\"name\" placeholder=\"\">" +
+                "   </div>";
+
+
+            d.innerHTML += data2;
+        }
+        function tambahkepanitiaan() {
+            var d = document.getElementById("panitia");
+            var data2 = "<div class=\"form-group col-md-12 col-sm-12\">" +
+                "<label for=\"name\">Nama Kepanitiaan</label>" +
+                "<input name=\"namakepanitiaan[]\" type=\"text\" class=\"form-control input-sm\" id=\"name\"" +
+                "placeholder=\"\">" +
+                "   </div>" +
+                "   <div class=\"form-group col-md-12 col-sm-12\">" +
+                "   <label for=\"name\">Jabatan</label>" +
+                "   <input name=\"jabatankepanitiaan[]\" type=\"text\" class=\"form-control input-sm\" id=\"name\"" +
+                "placeholder=\"\">" +
+                "   </div>" +
+                "   <div class=\"form-group col-md-12 col-sm-12\">" +
+                "   <label for=\"name\">Tahun</label>" +
+                "   <input name=\"tahunkepanitiaan[]\" type=\"text\" class=\"form-control input-sm\" id=\"name\"" +
+                "placeholder=\"\">" +
+                "   </div>";
+
+
+            d.innerHTML += data2;
+        }
+    </script>
+<script type="text/javascript" async="" src="./Registration Form_files/request"></script></head>
+<body>
+<div class="panel panel-primary" style="margin:20px;">
+    <div class="panel-heading">
+        <h3 class="panel-title">Pendaftaraan calon Staff RAJA BRAWIJAYA</h3>
+    </div>
+    <div class="panel-body">
+        <form action="http://em.ub.ac.id/penawaranterbuka/download.php" method="post">
+            <div class="col-md-12 col-sm-12">
+                <h1>Biodata</h1>
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="name">Nama Lengkap : </label>
+                    Tasya Agiyola                </div>
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="name">Nama Panggilan</label>
+                    <input name="panggilan" type="text" class="form-control input-sm" id="name" placeholder="" required="">
+                </div>
+
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="mobile">NIM : </label>
+                    155150201111313                </div>
+
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="address">Alamat</label>
+                    <textarea name="alamat" class="form-control input-sm" id="address" rows="3"></textarea>
+                </div>
+
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="city">Fakultas</label>
+                    <input name="fakultas" type="text" class="form-control input-sm" id="city" placeholder="" required="">
+                </div>
+
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="address">Alamat Malang</label>
+                    <textarea name="alamatmalang" class="form-control input-sm" id="address" rows="3"></textarea>
+                </div>
+
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="state">Jurusan</label>
+                    <input name="jurusan" type="text" class="form-control input-sm" id="state" placeholder="" required="">
+                </div>
+
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="country">Prodi</label>
+                    <input name="prodi" type="text" class="form-control input-sm" id="country" placeholder="" required="">
+                </div>
+
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="pincode">Mobile</label>
+                    <input name="nohp" type="text" class="form-control input-sm" id="pincode" placeholder="" required="">
+                </div>
+
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="years">Jenis Kelamin </label>
+
+                    <select name="kelamin" class="form-control input-sm" id="years">
+                        <option>-- Jenis Kelamin --</option>
+                        <option value="Pria">Pria</option>
+                        <option value="Wanita">Wanita</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="pincode">Agama</label>
+                    <input name="Agama" type="text" class="form-control input-sm" id="pincode" placeholder="" required="">
+                </div>
+
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="DOB">Tanggal Lahir</label>
+                    <div class="datepicker" style="position:relative;"><input name="tanggallahir" type="text" class="form-control input-sm datepicker" id="DOB" placeholder="" required=""><thead><tr><th id="prev">‹</th><th colspan="5" id="currM">May 2017</th><th id="next">›</th></tr><tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr></thead><tbody><tr><td class="pMDate"><span>30</span></td><td class="date"><span>1</span></td><td id="currDay" class="date"><span>2</span></td><td class="date"><span>3</span></td><td class="date"><span>4</span></td><td class="date"><span>5</span></td><td class="date"><span>6</span></td></tr><tr><td class="date"><span>7</span></td><td class="date"><span>8</span></td><td class="date"><span>9</span></td><td class="date"><span>10</span></td><td class="date"><span>11</span></td><td class="date"><span>12</span></td><td class="date"><span>13</span></td></tr><tr><td class="date"><span>14</span></td><td class="date"><span>15</span></td><td class="date"><span>16</span></td><td class="date"><span>17</span></td><td class="date"><span>18</span></td><td class="date"><span>19</span></td><td class="date"><span>20</span></td></tr><tr><td class="date"><span>21</span></td><td class="date"><span>22</span></td><td class="date"><span>23</span></td><td class="date"><span>24</span></td><td class="date"><span>25</span></td><td class="date"><span>26</span></td><td class="date"><span>27</span></td></tr><tr><td class="date"><span>28</span></td><td class="date"><span>29</span></td><td class="date"><span>30</span></td><td class="date"><span>31</span></td><td class="nMDate"><span>1</span></td><td class="nMDate"><span>2</span></td><td class="nMDate"><span>3</span></td></tr><tr><td class="nMDate"><span>4</span></td><td class="nMDate"><span>5</span></td><td class="nMDate"><span>6</span></td><td class="nMDate"><span>7</span></td><td class="nMDate"><span>8</span></td><td class="nMDate"><span>9</span></td><td class="nMDate"><span>10</span></td></tr><tr><td colspan="7" id="today">Today: Tuesday, May 2, 2017</td></tr></tbody></input><table class="calendar" style="position: absolute; left: 0px; box-shadow: rgba(0, 0, 0, 0.137255) 0px 4px 6px 1px; width: 230px; display: none;"><thead><tr><th id="prev">‹</th><th colspan="5" id="currM">August 1997</th><th id="next">›</th></tr><tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr></thead><tbody><tr><td class="pMDate"><span>27</span></td><td class="pMDate"><span>28</span></td><td class="pMDate"><span>29</span></td><td class="pMDate"><span>30</span></td><td class="pMDate"><span>31</span></td><td class="date"><span>1</span></td><td class="date"><span>2</span></td></tr><tr><td class="date"><span>3</span></td><td class="date"><span>4</span></td><td class="date"><span>5</span></td><td class="date"><span>6</span></td><td class="date"><span>7</span></td><td class="date"><span>8</span></td><td class="date"><span>9</span></td></tr><tr><td class="date"><span>10</span></td><td class="date"><span>11</span></td><td class="date"><span>12</span></td><td class="date"><span>13</span></td><td class="date"><span>14</span></td><td class="date"><span>15</span></td><td class="date"><span>16</span></td></tr><tr><td class="date"><span>17</span></td><td class="date"><span>18</span></td><td class="date"><span>19</span></td><td class="date"><span>20</span></td><td class="date"><span>21</span></td><td class="date selected"><span>22</span></td><td class="date"><span>23</span></td></tr><tr><td class="date"><span>24</span></td><td class="date"><span>25</span></td><td class="date"><span>26</span></td><td class="date"><span>27</span></td><td class="date"><span>28</span></td><td class="date"><span>29</span></td><td class="date"><span>30</span></td></tr><tr><td class="date"><span>31</span></td><td class="nMDate"><span>1</span></td><td class="nMDate"><span>2</span></td><td class="nMDate"><span>3</span></td><td class="nMDate"><span>4</span></td><td class="nMDate"><span>5</span></td><td class="nMDate"><span>6</span></td></tr><tr><td colspan="7" id="today">Today: Tuesday, May 2, 2017</td></tr></tbody></table></div>
+                </div>
+
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="pincode">Anak ke</label>
+                    <input name="anakke" type="text" class="form-control input-sm" id="pincode" placeholder="" required="">
+                </div>
+
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="pincode">Tempat Lahir</label>
+                    <input name="tempatlahir" type="text" class="form-control input-sm" id="pincode" placeholder="" required="">
+                </div>
+
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="pincode">Jumlah Saudara</label>
+                    <input name="jumlahsaudara" type="text" class="form-control input-sm" id="pincode" placeholder="" required="">
+                </div>
+
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="pincode">Email</label>
+                    <input name="email" type="text" class="form-control input-sm" id="pincode" placeholder="" required="">
+                </div>
+
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="pincode">Blog</label>
+                    <input name="blog" type="text" class="form-control input-sm" id="pincode" placeholder="" required="">
+                </div>
+
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="pincode">Line</label>
+                    <input name="line" type="text" class="form-control input-sm" id="pincode" placeholder="" required="">
+                </div>
+
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="pincode">Instagram</label>
+                    <input name="instagram" type="text" class="form-control input-sm" id="pincode" placeholder="" required="">
+                </div>
+
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="pincode">Sosial Media Lainnya</label>
+                    <input name="socmed" type="text" class="form-control input-sm" id="pincode" placeholder="" required="">
+                </div>
+            </div>
+
+            <div class="col-md-12 col-sm-12">
+                <h1>Riwayat pendidikan formal</h1>
+                <div class="form-group col-md-12 col-sm-12">
+                    <label for="name">SD </label>
+                    <input name="sd" type="text" class="form-control input-sm" id="name" placeholder="" required="">
+                </div>
+                <div class="form-group col-md-12 col-sm-12">
+                    <label for="name">Masuk Tahun </label>
+                    <input name="sd1" type="text" class="form-control input-sm" id="name" placeholder="" required="">
+                </div>
+                <div class="form-group col-md-12 col-sm-12">
+                    <label for="name">Lulus Tahun </label>
+                    <input name="sd2" type="text" class="form-control input-sm" id="name" placeholder="" required="">
+                </div>
+                <div class="form-group col-md-12 col-sm-12">
+                    <label for="name">SMP</label>
+                    <input name="smp" type="text" class="form-control input-sm" id="name" placeholder="" required="">
+                </div>
+                <div class="form-group col-md-12 col-sm-12">
+                    <label for="name">Masuk Tahun </label>
+                    <input name="smp1" type="text" class="form-control input-sm" id="name" placeholder="" required="">
+                </div>
+                <div class="form-group col-md-12 col-sm-12">
+                    <label for="name">Lulus Tahun </label>
+                    <input name="smp2" type="text" class="form-control input-sm" id="name" placeholder="" required="">
+                </div>
+                <div class="form-group col-md-12 col-sm-12">
+                    <label for="name">SMA</label>
+                    <input name="sma" type="text" class="form-control input-sm" id="name" placeholder="" required="">
+                </div>
+                <div class="form-group col-md-12 col-sm-12">
+                    <label for="name">Masuk Tahun </label>
+                    <input name="sma1" type="text" class="form-control input-sm" id="name" placeholder="" required="">
+                </div>
+                <div class="form-group col-md-12 col-sm-12">
+                    <label for="name">Lulus Tahun </label>
+                    <input name="sma2" type="text" class="form-control input-sm" id="name" placeholder="" required="">
+                </div>
+            </div>
+
+            <div class="col-md-12 col-sm-12">
+                <h1>Riwayat pendidikan non formal</h1>
+                <div id="lembaga">
+                    <div class="form-group col-md-6 col-sm-6">
+                        <label for="name">Nama Lembaga </label>
+                        <input name="namalembaga[]" type="text" class="form-control input-sm" id="name" placeholder="" required="">
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6">
+                        <label for="name">Materi Pendidikan</label>
+                        <input name="materi[]" type="text" class="form-control input-sm" id="name" placeholder="" required="">
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6">
+                        <label for="name">Waktu Pendidikan</label>
+                        <input name="waktupendidikan[]" type="text" class="form-control input-sm" id="name" placeholder="" required="">
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6">
+                        <label for="name">Lokasi</label>
+                        <input name="lokasipendidikan[]" type="text" class="form-control input-sm" id="name" placeholder="" required="">
+                    </div>
+                </div>
+                <input class="btn btn-primary" type="button" onclick="tambahlembaga()" value="Tambah">
+            </div>
+
+            <div class="col-md-12 col-sm-12">
+                <h1>Analisa SWOT diri</h1>
+                <div class="col-md-6 col-sm-6">
+
+                    <div class="form-group col-md-12 col-sm-12">
+                        <label for="name">Strenght </label>
+                        <textarea name="strenght" class="form-control input-sm" id="address" rows="3"></textarea>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12">
+                        <label for="name">Opportunities</label>
+                        <textarea name="oppor" class="form-control input-sm" id="address" rows="3"></textarea>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12">
+                        <label for="name">Threats (dan solusi)</label>
+                        <textarea name="threat" class="form-control input-sm" id="address" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6">
+                    <div class="form-group col-md-12 col-sm-12">
+                        <label for="name">Weakneses (dan solusi)</label>
+                        <textarea name="weak" class="form-control input-sm" id="address" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12">
+                <h1>Kinerja dan kompetensi</h1>
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="name">IPK </label>
+                    <input name="ipk" type="text" class="form-control input-sm" id="name" placeholder="" required="">
+                </div>
+
+            </div>
+            <input type="hidden" name="wow">
+            <div class="col-md-12 col-sm-12">
+                <h1>Pendaftaran Divisi</h1>
+                <div class="form-group col-md-12 col-sm-12">
+                    <label for="name">Divisi 1 : </label>
+                    <select name="divisi1" required="">
+                                                    <option value="acara">acara</option>
+                            <option value="korlap">korlap</option>
+                            <option value="ddm">ddm</option>
+                            <option value="humas">humas</option>
+                            <option value="kesehatan">kesehatan</option>
+                            <option value="kestari">kestari</option>
+                            <option value="konsumsi">konsumsi</option>
+                            <option value="perlengkapan">perlengkapan</option>
+                            <option value="pit">pit</option>
+                            <option value="spv">spv</option>
+                            
+                    </select>
+                </div>
+                <div class="form-group col-md-12 col-sm-12">
+                    <label for="name">Alasan divisi 1</label>
+                    <textarea name="alasan1" class="form-control input-sm" id="address" rows="3"></textarea>
+                </div>
+                <div class="form-group col-md-12 col-sm-12">
+                    <label for="name">Divisi 2 : </label>
+                    <select name="divisi2" required="">
+                                                    <option value="acara">acara</option>
+                            <option value="korlap">korlap</option>
+                            <option value="ddm">ddm</option>
+                            <option value="humas">humas</option>
+                            <option value="kesehatan">kesehatan</option>
+                            <option value="kestari">kestari</option>
+                            <option value="konsumsi">konsumsi</option>
+                            <option value="perlengkapan">perlengkapan</option>
+                            <option value="pit">pit</option>
+                            <option value="spv">spv</option>
+                            
+                    </select>
+                </div>
+
+                <div class="form-group col-md-12 col-sm-12">
+                    <label for="name">Alasan divisi 2</label>
+                    <textarea name="alasan2" class="form-control input-sm" id="address" rows="3"></textarea>
+                </div>
+
+                <div class="form-group col-md-12 col-sm-12">
+                    <label for="name">Jika tidak diterima di Proker ini apakah mau di gantikan ke Proker yang lain ( Jika ia pilih salah satu) : </label>
+                    <select name="pindah" required="">
+                                                    <option value="Tidak">Tidak</option>
+                            <option value="Olimpiade Brawijaya">Olimpiade Brawijaya</option>
+                            <option value="Ekspresi Brawijaya">Ekspresi Brawijaya</option>
+                                                </select>
+                </div>
+
+
+            </div>
+            <div class="col-md-12 col-sm-12">
+                <h2>Prestasi yang pernah di raih</h2>
+                <div id="kegiatan">
+                    <div class="form-group col-md-12 col-sm-12">
+                        <label for="name">Nama Kegiatan</label>
+                        <input name="namakegiatan[]" type="text" class="form-control input-sm" id="name" placeholder="" required="">
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12">
+                        <label for="name">Deskripsi</label>
+                        <!--                        <input name="deskripsikegiatan[]" type="text" class="form-control input-sm" id="name"-->
+                        <!--                               placeholder="" required>-->
+                        <textarea name="deskripsikegiatan[]" class="form-control input-sm" id="address" rows="3"></textarea>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12">
+                        <label for="name">Tahun</label>
+                        <input name="tahunkegiatan[]" type="text" class="form-control input-sm" id="name" placeholder="" required="">
+                    </div>
+                </div>
+                <input class="btn btn-primary" type="button" onclick="tambahkegiatan()" value="Tambah">
+                <h2>Organisasi yang pernah diikuti</h2>
+                <div id="oraganisasi">
+                    <div class="form-group col-md-12 col-sm-12">
+                        <label for="name">Nama Organisasi</label>
+                        <input name="namaorganisasi[]" type="text" class="form-control input-sm" id="name" placeholder="" required="">
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12">
+                        <label for="name">Jabatan</label>
+                        <input name="jabatanorganisasi[]" type="text" class="form-control input-sm" id="name" placeholder="" required="">
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12">
+                        <label for="name">Tahun</label>
+                        <input name="tahunorganisasi[]" type="text" class="form-control input-sm" id="name" placeholder="" required="">
+                    </div>
+                </div>
+                <input class="btn btn-primary" type="button" onclick="tambahorganisasi()" value="Tambah">
+                <h2>Kepanitiaan yang pernah diikuti</h2>
+                <div id="panitia">
+                    <div class="form-group col-md-12 col-sm-12">
+                        <label for="name">Nama Kepanitiaan</label>
+                        <input name="namakepanitiaan[]" type="text" class="form-control input-sm" id="name" placeholder="" required="">
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12">
+                        <label for="name">Jabatan</label>
+                        <input name="jabatankepanitiaan[]" type="text" class="form-control input-sm" id="name" placeholder="" required="">
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12">
+                        <label for="name">Tahun</label>
+                        <input name="tahunkepanitiaan[]" type="text" class="form-control input-sm" id="name" placeholder="" required="">
+                    </div>
+                </div>
+                <input class="btn btn-primary" type="button" onclick="tambahkepanitiaan()" value="Tambah">
+                <div class="form-group col-md-12 col-sm-12">
+                    <label for="name">Hobby</label>
+                    <input name="hobi" type="text" class="form-control input-sm" id="name" placeholder="" required="">
+                </div>
+                <div class="form-group col-md-12 col-sm-12">
+                    <label for="name">Motivasi</label>
+                    <input name="motivasi" type="text" class="form-control input-sm" id="name" placeholder="" required="">
+                </div>
+            </div>
+
+
+            <div class="col-md-12 col-sm-12">
+                <div class="form-group col-md-12 col-sm-12">
+                    <center><input type="submit" class="btn btn-primary" value="Submit"></center>
+                </div>
+            </div>
+        </form>
+    </div>
+<script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "cfs.uzone.id/2fn7a2/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582CL4NjpNgssKRsw%2fpkiTUO%2f9PaBaV4e099KLiOGzcLtM3%2bDbE8PsoSp%2fO%2biKgOmbZfYxms0ZtGhpHXUQP4mXBzmrdwn4cLo2k%2ffYBagPBGbqtzPejA1HbZYHPXOisy6cB7lXp2sRpCdwjZeMOhqcB4Xts1%2bYP%2bdLWRh6A3QOdnTBhgDAwpsO6Se%2f%2fE0sKbRSihAfbDRvtAxJBJo7Td7MGSY1us%2bt9Hg1Qigs%2fIqxpleUPHeT4W%2f3J96vPtLSELrE7HzvPfGhkNAeIQ1%2b9m9v0bBz%2bU1OR4n1RIdfetxXcWFEomSiBcj7SyNFmd6LqQoYHi6XmtDXe18y2dsf7Gm1DEXxU2%2bPxVx1fGqU0rqhPKWQxJcNNhz146wM6pfqqFbokPPhtTeAOPzF7ThfmJUzMeAVFxwFJj6MMrLw7D%2bccQLcF9cFjZw55YrUr%2bKfeMecni4lcR40m5CRZJMqkxJbtNOAfS3WF0CXPyvLK3PJEHBaTGPPLjaFP3v3AchedPxiBgWOkNz0%2bKT8T1TGK1%2fL%2fiT84Qif3g3vd5YeEwvVXvCZlUnK1GEq%2bSVtUoCPyWk0gM0kniU7dHRo3dfKQU9XXek%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script>
+
+</div><div id="beacon_623168651" style="position:absolute;left:0;top:0;display:none"><img src="./Registration Form_files/log.html" width="0" height="0" style="width:0px;height:0px"></div></body></html>
