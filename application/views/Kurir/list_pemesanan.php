@@ -19,7 +19,7 @@
 <body>
 	<!-- header-section-starts -->
 	<div class="header">
-		<div class="header-top-strip">
+		<div class="header-top-strip-kurir">
 			<div class="container">
 				<div class="header-top-left">
 					<ul>

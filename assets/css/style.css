@@ -51,6 +51,14 @@ label{
 	padding:8px 0 14px 0;
 	background-color:#816263;
 }
+.header-top-strip-kurir{
+	padding:8px 0 14px 0;
+	background-color:#009933;
+}
+.header-top-strip-admin{
+	padding:8px 0 14px 0;
+	background-color:#003399;
+}
 .header-top-left ul li {
     display: inline-block;
 	margin-right:15px;
