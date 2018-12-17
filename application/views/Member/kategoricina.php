@@ -84,7 +84,7 @@
 		<div class="container">
 			<div class="row">
             <div class="panel-body">
-            <h5>Resep Kategori -> Berkuah </h5>
+            <h5>Resep Kategori -> Cina </h5>
 
             <table class="table datatable">
             <thead>

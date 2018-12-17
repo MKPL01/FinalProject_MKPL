@@ -69,7 +69,6 @@
 		<div class="container">
 <div class="banner-bottom">
 	<div class="banner-bottom-left">
-		<h2>BUY<br>NOW<br></h2>
 	</div>
 			 <script>
 			    // You can also use "$(window).load(function() {"
