@@ -62,6 +62,18 @@ class E_Barang extends CI_Model{
         $query = $this->db->get('resep'); 
         return $query->result_array();
     }
+        function list_Korea(){
+        $this->db->select('*');
+        $this->db->where('kategori','Korea');
+        $query = $this->db->get('resep'); 
+        return $query->result_array();
+    }       
+        function list_Jepang(){
+        $this->db->select('*');
+        $this->db->where('kategori','Jepang');
+        $query = $this->db->get('resep'); 
+        return $query->result_array();
+    }
 
     
 

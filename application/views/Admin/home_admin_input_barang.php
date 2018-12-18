@@ -108,6 +108,8 @@
                                         <option>Indonesia</option>
 										   <option>Cina</option>
                                            <option>Western</option>
+                                            <option>Korea</option>
+                                            <option>Jepang</option>
 									   </select></span></p>
                                     </div>
                                 </div>

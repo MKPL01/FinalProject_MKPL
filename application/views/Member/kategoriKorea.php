@@ -50,7 +50,7 @@
 	    <!--/.navbar-header-->
              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-               <li><a href="<?php echo site_url('main_user/index') ?>">Home</a></li>
+               <li><a href="<?php echo site_url('C_Member/index') ?>">Home</a></li>
                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kategori<b class="caret"></b></a>
                     <ul class="dropdown-menu multi-column columns-1">
@@ -61,8 +61,8 @@
                                     <li><a href="<?php echo site_url('main_user/filter_kategoriindonesia') ?>">Indonesia</a></li>
                                     <li><a href="<?php echo site_url('main_user/filter_kategoricina') ?>">Cina</a></li>
                                     <li><a href="<?php echo site_url('main_user/filter_kategoriwestern') ?>">Western</a></li>
-                                    <li><a href="<?php echo site_url('main_user/filter_kategoriwestern') ?>">Korea</a></li>
-                                    <li><a href="<?php echo site_url('main_user/filter_kategoriwestern') ?>">Jepang</a></li>
+                                   <li><a href="<?php echo site_url('main_user/filter_kategoriKorea') ?>">Korea</a></li>
+						            <li><a href="<?php echo site_url('main_user/filter_kategoriJepang') ?>">Jepang</a></li>
                                 </ul>
                             </div>
                             <div class="clearfix"></div>
@@ -81,7 +81,7 @@
 		<div class="container">
 			<div class="row">
             <div class="panel-body">
-            <h5>Resep Kategori -> Indonesia </h5>
+            <h5>Resep Kategori -> Berkuah </h5>
 
             <table class="table datatable">
             <thead>
@@ -102,7 +102,7 @@
               <td><img src="<?php echo base_url();?><?php echo $r['gambar'];?>" style="width: 200px" /></td>
                <td>  
                	<div class="mb-footer">
-                        <div><a href="<?php echo site_url('main_user/lihatdetailresep/'.$r['id_resep']);?>" class="btn btn-default">Details</a> </div>
+                        <div><a href="<?php echo site_url('main_user/lihatdetailresep/'.$r['id_resep']);?>" class="btn btn-default">Details</a>
             </td>
 
             </tr>
