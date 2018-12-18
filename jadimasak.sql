@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 18, 2018 at 08:31 AM
+-- Generation Time: Dec 18, 2018 at 10:17 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -226,6 +226,7 @@ CREATE TABLE `resep` (
   `harga` int(11) NOT NULL,
   `kategori` varchar(100) NOT NULL,
   `stock` int(11) NOT NULL,
+  `detailbahan` varchar(100) NOT NULL,
   `deskripsi` text NOT NULL,
   `gambar` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -234,18 +235,18 @@ CREATE TABLE `resep` (
 -- Dumping data for table `resep`
 --
 
-INSERT INTO `resep` (`id_resep`, `id_user`, `namaresep`, `harga`, `kategori`, `stock`, `deskripsi`, `gambar`) VALUES
-(5, 1, 'Bakso Sapi', 50000, 'Indonesia', 1000, 'Resep Bakso Sapi yang memiliki bahan yang lengkap dan berkualitas.', 'assets/images/resep/resep_Bakso Sapi.jpg'),
-(6, 1, 'Sate Padang', 30000, 'Indonesia', 1000, 'Resep Sate Padang yang memiliki bahan yang berkualitas', 'assets/images/resep/resep_Sate Padang.jpg'),
-(223, 1, 'FuyungHai', 50000, 'Cina', 100, 'telur dengan balutan kuah asam manis yang sedap', 'assets/images/resep/resep_FuyungHai.jpg'),
-(225, 1, 'Steak Daging', 800000, 'Western', -100, 'Daging impor yang dimakan serasa di surga', 'assets/images/resep/resep_Steak Daging.jpg'),
-(226, 48, 'bubur', 40000, 'Indonesia', 5, 'bubur dengan taburan ayam cincang yang menggugah selera saat sarapan', 'assets/images/resep/resep_bubur.jpg'),
-(233, 1, 'kimbab', 50000, 'Korea', 20, 'enak', 'assets/images/resep/resep_kimbab.jpg'),
-(236, 1, 'pasta', 30000, 'Western', 10, 'enak', 'assets/images/resep/resep_pasta.jpg'),
-(237, 1, 'steak', 50000, 'Western', 10, 'enak', 'assets/images/resep/resep_steak.jpg'),
-(241, 1, 'Sate Ponorogo', 40000, 'Indonesia', 10, 'enak', 'assets/images/resep/resep_Sate Ponorogo.jpg'),
-(242, 1, 'Sate bebek', 50000, 'Indonesia', 10, 'enak', 'assets/images/resep/resep_Sate bebek.jpg'),
-(243, 1, 'Ayam Kungpow', 40000, 'Cina', 20, 'enak', 'assets/images/resep/resep_Ayam Kungpow.jpg');
+INSERT INTO `resep` (`id_resep`, `id_user`, `namaresep`, `harga`, `kategori`, `stock`, `detailbahan`, `deskripsi`, `gambar`) VALUES
+(5, 1, 'Bakso Sapi', 50000, 'Indonesia', 1000, '5 kg daging sapi, 3 kg daging ayam', 'Resep Bakso Sapi yang memiliki bahan yang lengkap dan berkualitas.', 'assets/images/resep/resep_Bakso Sapi.jpg'),
+(6, 1, 'Sate Padang', 30000, 'Indonesia', 1000, '5 kg daging sapi, bumbu kacang', 'Resep Sate Padang yang memiliki bahan yang berkualitas', 'assets/images/resep/resep_Sate Padang.jpg'),
+(223, 1, 'FuyungHai', 50000, 'Cina', 100, '1 kg telur ayam, 5 ikat daun bawang', 'telur dengan balutan kuah asam manis yang sedap', 'assets/images/resep/resep_FuyungHai.jpg'),
+(225, 1, 'Steak Daging', 800000, 'Western', -100, '5 kg daging sapi, 10 buah kentang', 'Daging impor yang dimakan serasa di surga', 'assets/images/resep/resep_Steak Daging.jpg'),
+(226, 48, 'bubur', 40000, 'Indonesia', 5, '5 kg beras, 3 kg daging ayam', 'bubur dengan taburan ayam cincang yang menggugah selera saat sarapan', 'assets/images/resep/resep_bubur.jpg'),
+(233, 1, 'kimbab', 50000, 'Korea', 20, '5 bungkus nori, 3 kg nasi jepang', 'enak', 'assets/images/resep/resep_kimbab.jpg'),
+(236, 1, 'pasta', 30000, 'Western', 10, '5 bungkus pasta, 5 buah tomat', 'enak', 'assets/images/resep/resep_pasta.jpg'),
+(237, 1, 'steak', 50000, 'Western', 10, '3 kg daging sapi, 5 buah wortel', 'enak', 'assets/images/resep/resep_steak.jpg'),
+(241, 1, 'Sate Ponorogo', 40000, 'Indonesia', 10, '3 kg daging ayam, 10 ikat tusuk sate', 'enak', 'assets/images/resep/resep_Sate Ponorogo.jpg'),
+(242, 1, 'Sate bebek', 50000, 'Indonesia', 10, '3 kg daging bebek, 3 ikat tusuk sate', 'enak', 'assets/images/resep/resep_Sate bebek.jpg'),
+(243, 1, 'Ayam Kungpow', 40000, 'Cina', 20, '5 kg daging ayam', 'enak', 'assets/images/resep/resep_Ayam Kungpow.jpg');
 
 -- --------------------------------------------------------
 

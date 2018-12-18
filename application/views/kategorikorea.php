@@ -14,9 +14,6 @@
 <!-- for bootstrap working -->
 	<script type="text/javascript" src="<?php echo base_url();?>assets/js/bootstrap-3.1.1.min.js"></script>
 <!-- //for bootstrap working -->
-<!-- cart -->
-	<script src="<?php echo base_url();?>assets/js/simpleCart.min.js"> </script>
-<!-- cart -->
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/flexslider.css" type="text/css" media="screen" />
 </head>
 <body>
@@ -26,8 +23,8 @@
 			<div class="container">
 				<div class="header-top-left">
 					<ul>
-						<li><a href="<?php echo site_url('C_Login/logout') ?>"><span class="glyphicon glyphicon-user"> </span>Logout</a>
-						<li><a href="<?php echo site_url('C_Member/lihatprofile') ?>"><span class="glyphicon glyphicon-user"> </span><?php echo $datauser->first_name?></a></		
+						<li><a href="<?php echo site_url('C_Login/masuk') ?>"><span class="glyphicon glyphicon-user"> </span>Login</a>
+						<li><a href="<?php echo site_url('main_user/daftar') ?>"><span class="glyphicon glyphicon-lock"> </span>Create an Account</a></li>		
 					</ul>
 				</div>
 				<div class="clearfix"> </div>
@@ -50,33 +47,31 @@
 					<h1><a href="#">JadiMasak </a></h1>
 				</div>
 	    </div>
-  <!--/.navbar-header-->
-		     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	        <ul class="nav navbar-nav">
-	           <li><a href="<?php echo site_url('C_Member/index') ?>">Home</a></li>
-	           <li class="dropdown">
-		        	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Kategori<b class="caret"></b></a>
-		            <ul class="dropdown-menu multi-column columns-1">
-			            <div class="row">
-				            <div class="col-sm-6">
-					            <ul class="multi-column-dropdown">
-									<h6>NEW IN</h6>
-						            <li><a href="<?php echo site_url('C_Member/filter_kategoriindonesia') ?>">Indonesia</a></li>
-						            <li><a href="<?php echo site_url('C_Member/filter_kategoricina') ?>">Cina</a></li>
-						            <li><a href="<?php echo site_url('C_Member/filter_kategoriwestern') ?>">Western</a></li>
-						            <li><a href="<?php echo site_url('C_Member/filter_kategoriwestern') ?>">Korea</a></li>
-						            <li><a href="<?php echo site_url('C_Member/filter_kategoriwestern') ?>">Jepang</a></li>
-					            </ul>
-				            </div>
-							<div class="clearfix"></div>
-			            </div>
-		            </ul>
-		        </li>
-					<li><a href="<?php echo site_url('C_Member/view_invoice') ?>">List Pesanan</a></li>
-					<li><a href="<?php echo site_url('C_Member/view_cart') ?>">Keranjang</a></li>
-	        </ul>
-	    </div>	    
-	    <!--/.navbar-collapse-->
+	    <!--/.navbar-header-->
+             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+               <li><a href="<?php echo site_url('main_user/index') ?>">Home</a></li>
+               <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kategori<b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-column columns-1">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul class="multi-column-dropdown">
+                                    <h6>NEW IN</h6>
+                                    <li><a href="<?php echo site_url('main_user/filter_kategoriindonesia') ?>">Indonesia</a></li>
+                                    <li><a href="<?php echo site_url('main_user/filter_kategoricina') ?>">Cina</a></li>
+                                    <li><a href="<?php echo site_url('main_user/filter_kategoriwestern') ?>">Western</a></li>
+                                     <li><a href="<?php echo site_url('main_user/filter_kategorikorea') ?>">Korea</a></li>
+                                      <li><a href="<?php echo site_url('main_user/filter_kategorijepang') ?>">Jepang</a></li>
+                                </ul>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+        </div>      
+        <!--/.navbar-collapse-->
 	</nav>
 	<!--/.navbar-->
 </div>
@@ -86,14 +81,14 @@
 		<div class="container">
 			<div class="row">
             <div class="panel-body">
-            <h5>Resep Kategori -> Western </h5>
+            <h5>Resep Kategori -> Korea </h5>
 
             <table class="table datatable">
             <thead>
               <tr>
               <th>Nama Resep</th>
               <th>Harga</th>
-			  <th>Detail Bahan </th>
+              <th>Detail Bahan </th>
               <th>Gambar</th>
               <th>Action</th>
               </tr>
@@ -107,8 +102,7 @@
               <td><img src="<?php echo base_url();?><?php echo $r['gambar'];?>" style="width: 200px" /></td>
                <td>  
                	<div class="mb-footer">
-                        <div><a href="<?php echo site_url('C_Member/lihatdetailresep/'.$r['id_resep']);?>" class="btn btn-default">Details</a>
-                        <a href="<?php echo site_url('C_Member/add_to_cart/'.$r['id_resep']);?>" class="btn btn-default">Order</a> </div>
+                        <div><a href="<?php echo site_url('main_user/lihatdetailresep/'.$r['id_resep']);?>" class="btn btn-default">Details</a>
             </td>
 
             </tr>

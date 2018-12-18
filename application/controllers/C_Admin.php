@@ -48,6 +48,7 @@ class C_Admin extends CI_Controller {
             $harga =$this->input->post('harga');
             $kategori =$this->input->post('kategori');
             $stock =$this->input->post('stock');
+			$detailbahan =$this->input->post('detailbahan');
             $deskripsi =$this->input->post('deskripsi');
             
             //Upload Foto
@@ -75,7 +76,7 @@ class C_Admin extends CI_Controller {
              }
                 //masukkan ke database
                 $gambar = 'assets/images/resep/resep_'.$namaresep.'.'.$tipe;
-               $cek = $this->E_Barang->addresep('resep',array ("id_user"=>$id_user,"namaresep" => $namaresep, "harga" => $harga,"kategori" => $kategori, "stock" => $stock, "deskripsi" => $deskripsi, "gambar" => $gambar));
+               $cek = $this->E_Barang->addresep('resep',array ("id_user"=>$id_user,"namaresep" => $namaresep, "harga" => $harga,"kategori" => $kategori, "stock" => $stock, "detailbahan" => $detailbahan, "deskripsi" => $deskripsi, "gambar" => $gambar));
                 if ($cek >= 1){
                     ?> <script language="JavaScript">alert('Berhasil menambahkan resep!');
                         document.location='<?php echo site_url('C_Admin/index') ?>'</script><?php

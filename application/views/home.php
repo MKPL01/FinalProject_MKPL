@@ -61,8 +61,8 @@
 						            <li><a href="<?php echo site_url('main_user/filter_kategoriindonesia') ?>">Indonesia</a></li>
 						            <li><a href="<?php echo site_url('main_user/filter_kategoricina') ?>">Cina</a></li>
 						            <li><a href="<?php echo site_url('main_user/filter_kategoriwestern') ?>">Western</a></li>
-						             <li><a href="<?php echo site_url('main_user/filter_kategoriwestern') ?>">Korea</a></li>
-						              <li><a href="<?php echo site_url('main_user/filter_kategoriwestern') ?>">Jepang</a></li>
+						             <li><a href="<?php echo site_url('main_user/filter_kategorikorea') ?>">Korea</a></li>
+						              <li><a href="<?php echo site_url('main_user/filter_kategorijepang') ?>">Jepang</a></li>
 					            </ul>
 				            </div>
 							<div class="clearfix"></div>

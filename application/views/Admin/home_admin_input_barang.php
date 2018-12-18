@@ -124,6 +124,12 @@
                                     </div>
                                 </div>
                             </div>
+						<div class="form-group">
+                                <label class="col-md-3 control-label">Detail Bahan</label>
+                                <div class="col-md-9 col-xs-12">
+                                    <textarea class="form-control" rows="5" name="detailbahan" required="required"></textarea>
+                                </div>
+                            </div>
 
                             <div class="form-group">
                                 <label class="col-md-3 control-label">Deskripsi</label>

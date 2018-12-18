@@ -40,6 +40,14 @@ class Main_user extends CI_Controller {
         $data['resep'] = $this->E_Barang->list_western();
         $this->load->view('kategoriwestern',$data);
     }
+	public function filter_kategorijepang() {
+        $data['resep'] = $this->E_Barang->list_jepang();
+        $this->load->view('kategorijepang',$data);
+    }
+	public function filter_kategorikorea() {
+        $data['resep'] = $this->E_Barang->list_korea();
+        $this->load->view('kategorikorea',$data);
+    }
 
 	public function adduser(){
 		$username =$this->input->post('username'); 

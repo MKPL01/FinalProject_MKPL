@@ -46,15 +46,15 @@ class C_Member extends CI_Controller {
         $this->load->view('Member/kategoriwestern',$data);
     }
 
-     public function filter_kategoriKorea() {
+     public function filter_kategorikorea() {
         $data['datauser'] = $this->E_User->pilih_user($this->session->userdata('id'))->row();
         $data['resep'] = $this->E_Barang->list_Korea();
-        $this->load->view('Member/kategoriKorea',$data);
+        $this->load->view('Member/kategorikorea',$data);
     }
-     public function filter_kategoriJepang() {
+     public function filter_kategorijepang() {
         $data['datauser'] = $this->E_User->pilih_user($this->session->userdata('id'))->row();
         $data['resep'] = $this->E_Barang->list_Jepang();
-        $this->load->view('Member/kategoriJepang',$data);
+        $this->load->view('Member/kategorijepang',$data);
     }
 
      public function lihatprofile() {

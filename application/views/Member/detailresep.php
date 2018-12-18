@@ -122,6 +122,12 @@
                                 <input type="text" class="form-control" value="<?php echo $resep->stock ?>" disabled/>
                             </div>
                         </div>
+						<div class="form-group">
+                            <label class="col-sm-2 col-sm-offset-3 control-label">Detail Bahan</label>
+                                <div class="col-md-4 col-xs-12">
+                                <input type="text" class="form-control" value="<?php echo $resep->detailbahan ?>" disabled/>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label class="col-sm-2 col-sm-offset-3 control-label">Deskripsi</label>
                                 <div class="col-md-4 col-xs-12">

@@ -61,8 +61,8 @@
                                     <li><a href="<?php echo site_url('main_user/filter_kategoriindonesia') ?>">Indonesia</a></li>
                                     <li><a href="<?php echo site_url('main_user/filter_kategoricina') ?>">Cina</a></li>
                                     <li><a href="<?php echo site_url('main_user/filter_kategoriwestern') ?>">Western</a></li>
-                                     <li><a href="<?php echo site_url('main_user/filter_kategoriwestern') ?>">Korea</a></li>
-                                      <li><a href="<?php echo site_url('main_user/filter_kategoriwestern') ?>">Jepang</a></li>
+                                     <li><a href="<?php echo site_url('main_user/filter_kategorikorea') ?>">Korea</a></li>
+                                      <li><a href="<?php echo site_url('main_user/filter_kategorijepang') ?>">Jepang</a></li>
                                 </ul>
                             </div>
                             <div class="clearfix"></div>
@@ -88,7 +88,7 @@
               <tr>
               <th>Nama Resep</th>
               <th>Harga</th>
-              
+              <th>Detail Bahan </th>
               <th>Gambar</th>
               <th>Action</th>
               </tr>
@@ -98,7 +98,7 @@
               <tr>
               <td><?php echo $r['namaresep'];?></td>
               <td><?php echo $r['harga'];?></td>
-              
+              <td><?php echo $r['detailbahan'];?></td>
               <td><img src="<?php echo base_url();?><?php echo $r['gambar'];?>" style="width: 200px" /></td>
                <td>  
                	<div class="mb-footer">

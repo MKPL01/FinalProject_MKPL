@@ -81,14 +81,14 @@
 		<div class="container">
 			<div class="row">
             <div class="panel-body">
-            <h5>Resep Kategori -> Berkuah </h5>
+            <h5>Resep Kategori -> Jepang </h5>
 
             <table class="table datatable">
             <thead>
               <tr>
               <th>Nama Resep</th>
               <th>Harga</th>
-              
+              <th>Detail Bahan </th>
               <th>Gambar</th>
               <th>Action</th>
               </tr>
@@ -98,7 +98,7 @@
               <tr>
               <td><?php echo $r['namaresep'];?></td>
               <td><?php echo $r['harga'];?></td>
-              
+              <td><?php echo $r['detailbahan'];?></td>
               <td><img src="<?php echo base_url();?><?php echo $r['gambar'];?>" style="width: 200px" /></td>
                <td>  
                	<div class="mb-footer">

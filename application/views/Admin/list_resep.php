@@ -76,7 +76,7 @@
               <tr>
               <th>Nama Resep</th>
               <th>Harga</th> 
-              
+              <th>Detail Bahan</th>
               <th>Gambar</th>
               <th>Action</th>
               </tr>
@@ -86,7 +86,7 @@
               <tr>
               <td><?php echo $r['namaresep'];?></td>
               <td><?php echo $r['harga'];?></td>
-              
+              <td><?php echo $r['detailbahan'];?></td>
               <td><img src="<?php echo base_url();?><?php echo $r['gambar'];?>" style="width: 200px" /></td>
                <td>  
                	<div class="mb-footer">
