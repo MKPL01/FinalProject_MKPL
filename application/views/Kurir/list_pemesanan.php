@@ -94,6 +94,9 @@
                	<div class="mb-footer">
                         <div><a href="<?php echo site_url('C_Kurir/konfirmasi/'.$p['id_pemesanan']);?>" class="btn btn-default">Konfirmasi Pengantaran</a> </div>
             </td>
+				<td> 
+				<a href ="<?php echo site_url('C_Kurir/delete_konfirmasi/'.$p['id_pemesanan']);?>" class="btn btn-default"> X </a>
+			</td>
 
             </tr>
             <?php }?>

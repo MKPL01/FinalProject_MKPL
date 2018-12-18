@@ -30,4 +30,10 @@ class C_Kurir extends CI_Controller {
             redirect('C_Kurir/list_order');
         }
     }
+		public function delete_konfirmasi($id_pemesanan){
+		$where = array('id_pemesanan' => $id_pemesanan);
+		$this->E_Barang->deleteData($where, 'pemesanan');
+		redirect('C_Kurir/list_order');
+	}
+
 }

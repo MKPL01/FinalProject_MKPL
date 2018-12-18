@@ -107,6 +107,12 @@ class E_Barang extends CI_Model{
         $query = $this->db->get();
         return $query->result_array();
     }
+	
+	function deleteData($where,$table){
+		$this->db->where($where);
+		$this->db->delete($table);
+	}
+
 
 
 
