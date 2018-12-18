@@ -14,9 +14,6 @@
 <!-- for bootstrap working -->
 	<script type="text/javascript" src="<?php echo base_url();?>assets/js/bootstrap-3.1.1.min.js"></script>
 <!-- //for bootstrap working -->
-<!-- cart -->
-	<script src="<?php echo base_url();?>assets/js/simpleCart.min.js"> </script>
-<!-- cart -->
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/flexslider.css" type="text/css" media="screen" />
 </head>
 <body>
@@ -26,8 +23,8 @@
 			<div class="container">
 				<div class="header-top-left">
 					<ul>
-						<li><a href="<?php echo site_url('C_Login/logout') ?>"><span class="glyphicon glyphicon-user"> </span>Logout</a>
-						<li><a href="<?php echo site_url('C_Member/lihatprofile') ?>"><span class="glyphicon glyphicon-user"> </span><?php echo $datauser->first_name?></a></		
+						<li><a href="<?php echo site_url('C_Login/masuk') ?>"><span class="glyphicon glyphicon-user"> </span>Login</a>
+						<li><a href="<?php echo site_url('main_user/daftar') ?>"><span class="glyphicon glyphicon-lock"> </span>Create an Account</a></li>		
 					</ul>
 				</div>
 				<div class="clearfix"> </div>
@@ -51,72 +48,68 @@
 				</div>
 	    </div>
 	    <!--/.navbar-header-->
-		     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	        <ul class="nav navbar-nav">
-	           <li><a href="<?php echo site_url('C_Member/index') ?>">Home</a></li>
-	           <li class="dropdown">
-		        	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Kategori<b class="caret"></b></a>
-		            <ul class="dropdown-menu multi-column columns-1">
-			            <div class="row">
-				            <div class="col-sm-6">
-					            <ul class="multi-column-dropdown">
-									<h6>NEW IN</h6>
-						            <li><a href="<?php echo site_url('C_Member/filter_kategoriindonesia') ?>">Indonesia</a></li>
-						            <li><a href="<?php echo site_url('C_Member/filter_kategoricina') ?>">Cina</a></li>
-						            <li><a href="<?php echo site_url('C_Member/filter_kategoriwestern') ?>">Western</a></li>
-						            <li><a href="<?php echo site_url('C_Member/filter_kategoriwestern') ?>">Korea</a></li>
-						            <li><a href="<?php echo site_url('C_Member/filter_kategoriwestern') ?>">Jepang</a></li>
-					            </ul>
-				            </div>
-							<div class="clearfix"></div>
-			            </div>
-		            </ul>
-		        </li>
-					<li><a href="<?php echo site_url('C_Member/view_invoice') ?>">List Pesanan</a></li>
-					<li><a href="<?php echo site_url('C_Member/view_cart') ?>">Keranjang</a></li>
-					<li>
+             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+               <li><a href="<?php echo site_url('main_user/index') ?>">Home</a></li>
+               <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kategori<b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-column columns-1">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul class="multi-column-dropdown">
+                                    <h6>NEW IN</h6>
+                                    <li><a href="<?php echo site_url('main_user/filter_kategoriindonesia') ?>">Indonesia</a></li>
+                                    <li><a href="<?php echo site_url('main_user/filter_kategoricina') ?>">Cina</a></li>
+                                    <li><a href="<?php echo site_url('main_user/filter_kategoriwestern') ?>">Western</a></li>
+                                    <li><a href="<?php echo site_url('main_user/filter_kategorikorea') ?>">Korea</a></li>
+                                    <li><a href="<?php echo site_url('main_user/filter_kategorijepang') ?>">Jepang</a></li>
+                                </ul>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
             		<?php echo form_open('C_Member/searching') ?>
                 	<input type="text" name="keyword" placeholder="cari resep" style="width: 240px">
                 	<input type="submit" name="search_submit" value="Cari">
                 	<?php echo form_close() ?>
 				</li>
-	        </ul>
-	    </div>	    
-	    <!--/.navbar-collapse-->
-	    <!--/.navbar-collapse-->
+            </ul>
+        </div>      
+        <!--/.navbar-collapse-->
 	</nav>
 	<!--/.navbar-->
 </div>
 </div>
+		</div>
 <section>
 		<div class="container">
 			<div class="row">
             <div class="panel-body">
-            <h5>List Pesanan</h5>
+            <h5>Hasil Pencarian </h5>
 
             <table class="table datatable">
             <thead>
               <tr>
-              <th>Nama Pemesan</th>
-              <th>Alamat Tujuan</th>
-              <th>Ongkir</th>
-              <th>Total Bayar</th>
-              <th>Pesanan Resep</th>
-              <th>Jumlah</th>
-              <th>Status</th>
+              <th>Nama Resep</th>
+              <th>Harga</th>
+              <th>Detail Bahan </th>
+              <th>Gambar</th>
+              <th>Action</th>
               </tr>
             </thead>
             <tbody>
-            <?php foreach($pemesanan as $p){ ?>
+            <?php foreach($resep as $r){ ?>
               <tr>
-              <td><?php echo $p['nama'];?></td>
-              <td><?php echo $p['alamat'];?></td>
-              <td><?php echo $p['ongkir'];?></td>
-              <td><?php echo $p['harga'];?></td>
-              <td><?php echo $p['namaresep'];?></td>
-              <td><?php echo $p['qty'];?></td>
-              <td><?php echo $p['status'];?></td> 
-
+              <td><?php echo $r['namaresep'];?></td>
+              <td><?php echo $r['harga'];?></td>
+              <td><?php echo $r['detailbahan'];?></td>
+              <td><img src="<?php echo base_url();?><?php echo $r['gambar'];?>" style="width: 200px" /></td>
+               <td>  
+               	<div class="mb-footer">
+                        <div><a href="<?php echo site_url('main_user/lihatdetailresep/'.$r['id_resep']);?>" class="btn btn-default">Details</a> </div>
+            </td>
 
             </tr>
             <?php }?>

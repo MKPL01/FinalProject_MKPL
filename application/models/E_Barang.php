@@ -5,6 +5,13 @@ class E_Barang extends CI_Model{
         $res =$this->db->insert($tabelname,$data);
         return $res; 
     }
+
+    function get_searching($keyword) {
+        $this->db->select('*');
+        $this->db->from('resep');
+        $this->db->like('namaresep', $keyword);
+        return $this->db->get()->result_array();
+    }
  function pilih_resep($id_resep){
         $this->db->where('id_resep',$id_resep);
         $query = $this->db->get('resep');

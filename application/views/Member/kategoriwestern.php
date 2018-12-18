@@ -74,6 +74,12 @@
 		        </li>
 					<li><a href="<?php echo site_url('C_Member/view_invoice') ?>">List Pesanan</a></li>
 					<li><a href="<?php echo site_url('C_Member/view_cart') ?>">Keranjang</a></li>
+					<li>
+            		<?php echo form_open('C_Member/searching') ?>
+                	<input type="text" name="keyword" placeholder="cari resep" style="width: 240px">
+                	<input type="submit" name="search_submit" value="Cari">
+                	<?php echo form_close() ?>
+				</li>
 	        </ul>
 	    </div>	    
 	    <!--/.navbar-collapse-->

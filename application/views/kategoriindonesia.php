@@ -69,6 +69,12 @@
                         </div>
                     </ul>
                 </li>
+                <li>
+            		<?php echo form_open('main_user/searching') ?>
+                	<input type="text" name="keyword" placeholder="cari resep" style="width: 240px">
+                	<input type="submit" name="search_submit" value="Cari">
+                	<?php echo form_close() ?>
+				</li>
             </ul>
         </div>      
         <!--/.navbar-collapse-->

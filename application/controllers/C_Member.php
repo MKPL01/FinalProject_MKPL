@@ -7,6 +7,13 @@ class C_Member extends CI_Controller {
         $autoload['libraries'] = array('database', 'session', 'xmlrpc');
         $autoload['helper'] = array('url', 'file');   
     } 
+
+    public function searching($keyword) {
+        $keyword = $this->input->post('keyword');
+        $data['resep'] = $this->E_Barang->get_searching($keyword);
+        $this->load->view('pencarian', $data);
+    }
+    
      public function index() {
             $data['judul']="Member";
             $data['content']="Member/home_member";

@@ -22,6 +22,12 @@ class Main_user extends CI_Controller {
          // $data['barang'] = $this->E_Barang->list_barangjadi();
 		 $this->load->view('home');
 	}
+
+    public function searching($keyword) {
+        $keyword = $this->input->post('keyword');
+        $data['resep'] = $this->E_Barang->get_searching($keyword);
+        $this->load->view('pencarian', $data);
+    }
 	
 	public function daftar(){
 			$this->load->view('register');
