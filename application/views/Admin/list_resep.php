@@ -91,6 +91,7 @@
                <td>  
                	<div class="mb-footer">
                         <a href="<?php echo site_url('C_Admin/update_stock/'.$r['id_resep']);?>" class="btn btn-default">Update Stock</a> </div>
+						 <a href="<?php echo site_url('C_Admin/delete_stock/'.$r['id_resep']);?>" class="btn btn-default">Hapus Stock</a> </div>
             </td>
 
             </tr>

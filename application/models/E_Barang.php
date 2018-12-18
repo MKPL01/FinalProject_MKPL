@@ -94,6 +94,17 @@ class E_Barang extends CI_Model{
         $res = $this->db->update($namatabel,$new_stock);
         return $res;
     }
+	 public function delete_stock($namatabel,$new_stock,$id_resep){
+		$this->delete_stock2($id_resep);
+        $this->db->where('id_resep',$id_resep);
+        $res = $this->db->delete($namatabel);
+        return $res;
+    }
+	public function delete_stock2($id_resep){
+        $this->db->where('id_resep',$id_resep);
+        $res = $this->db->delete('pemesanan');
+        return $res;
+    }
      public function update_status($namatabel,$status,$id_pemesanan){
         $this->db->where('id_pemesanan',$id_pemesanan);
         $res = $this->db->update($namatabel,$status);

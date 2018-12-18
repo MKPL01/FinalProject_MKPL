@@ -41,6 +41,14 @@ class C_Admin extends CI_Controller {
         $data['resep'] = $this->E_Barang->pilih_resep($id_resep)->row();
         $this->load->view('Admin/detailresep',$data);
     } 
+		public function delete_stock($id_resep){
+        $stock =$this->input->post('stock');
+       
+            $this->E_Barang->delete_stock('resep',array("stock" => $stock),$id_resep);
+        
+        ?><script language="JavaScript">alert('Delete Stock Success');
+        document.location='<?php echo site_url('C_Admin/listresep');?>'</script><?php
+    } 
 
        public function posting($id){
             $id_user = $id;
